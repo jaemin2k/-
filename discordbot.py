@@ -1,6 +1,7 @@
 import discord 
 import asyncio
 import os
+import random
 
 client = discord.Client()
 
@@ -24,7 +25,40 @@ async def on_message(message):
         await message.channel.send("너 생각 ㅎㅎ") 
 
     if message.content == "ㅎㅇ 재민":
-        await message.channel.send("ㅎㅇ") 
+        ran = random.randint(0,3)
+        if ran == 0:
+            d = "ㅎㅇ"
+        if ran == 1:
+            d = "하이하이"
+        if ran == 2:
+            d = "누구세요?"
+        if ran == 3:
+            d == "안녕? ㅎㅎ"
+        await message.channel.send(d)
+        
+    if message.content == "안녕 재민":
+        ran = random.randint(0,3)
+        if ran == 0:
+            d = "ㅎㅇ"
+        if ran == 1:
+            d = "하이하이"
+        if ran == 2:
+            d = "누구세요?"
+        if ran == 3:
+            d == "안녕? ㅎㅎ"
+        await message.channel.send(d)\
+        
+    if message.content == "하이 재민":
+        ran = random.randint(0,3)
+        if ran == 0:
+            d = "ㅎㅇ"
+        if ran == 1:
+            d = "하이하이"
+        if ran == 2:
+            d = "누구세요?"
+        if ran == 3:
+            d == "안녕? ㅎㅎ"
+        await message.channel.send(d)
 
 access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
