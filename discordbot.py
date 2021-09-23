@@ -23,5 +23,5 @@ async def on_message(message):
     if message.content == "뭐해 재민":
         await message.channel.send("너 생각 ㅎㅎ") 
 
-access_token = os.environ["BOT_TOKEN"]
+access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
