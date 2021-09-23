@@ -10,7 +10,7 @@ async def on_ready():
 
     print(client.user.name)
     print('성공적으로 봇이 시작되었습니다.')
-    game = discord.Game('재민')
+    game = discord.Game('League of Legends')
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
